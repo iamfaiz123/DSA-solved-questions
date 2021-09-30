@@ -1,0 +1,29 @@
+// code by faisal hussain and faizal khan
+// donate at paytm no. 7007925936
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[5];
+    for(int i=0;i<5;i++)
+    {
+    cin>>a[i];
+    }
+    
+    int last =4;
+    for(int i=0;i<5;i++)
+    {   if(i>=last)break;
+        if (a[i]<0){
+         while(a[last]<0){last--;}
+         int temp =a[last];
+         a[last]=a[i];
+         a[i]=temp;
+        }
+    }
+    for(int i=0;i<5;i++)
+    {
+        cout<<a[i];
+    }
+    return 0;
+        
+    }
