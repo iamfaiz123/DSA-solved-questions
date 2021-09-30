@@ -1,0 +1,24 @@
+//code is typed by faizal khan
+//iamfaizalkhn@gmail.com
+//consider donation at 7007925936
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int cmax ( int a[], int N){
+    int maxnow, MAX = 0;
+    for( auto i = 0; i < N ; i++)
+    {
+        maxnow =  std::max(a[i],maxnow+a[i]);
+        MAX = std::max(maxnow,MAX);
+        
+    } return MAX;
+}
+int main(){
+    int Arr[5];//modify to take your own input 
+    for(auto i  = 0 ; i< 5; i++)
+    {
+        cin>>Arr[i];
+    }
+    cout<<cmax(Arr , 5);
+    return 0;
+}
