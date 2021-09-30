@@ -1,6 +1,7 @@
 //code is typed by faizal khan
 //iamfaizalkhn@gmail.com
 //consider donation at 7007925936
+//there is a exception in the code, if the first element in the code is negative than you might get unexpected result,consider enhancement.
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
