@@ -1,15 +1,16 @@
 //code by faizal khan
 //iamfaizalkhn@gmail.com
 //consider donation at paytm@7007925936
+//this is just the mrthod to solve the question, modify the code to take your own inputs
 #include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-    vector <pair<int,int> V = {{1,3}, {2,4}, {5,7}, {6,8}};
+    vector <pair<int,int>> V = {{1,3}, {2,4}, {5,7}, {6,8}};
     stack <pair<int,int>> S;
     int n = V.size();
     sort(V.begin(),V.begin() + n);
-    S push({V[0].first,V[0].second});
+    S.push({V[0].first,V[0].second});
     for(auto i = 1 ; i<n ; i++)
     {
         if(S.top().second<V[i].first)
@@ -27,5 +28,3 @@ int main()
     //print the stack elements
     return 0;
 }
-
-    
