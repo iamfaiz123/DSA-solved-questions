@@ -1,0 +1,73 @@
+//code by faizal khan
+//comsider donation paytm@7007925936
+//iamfaizalkhn@gmail.com
+ // input two sorted array.
+
+
+  //function for union 
+
+int *union (int A[], int B[])
+{
+  int Asize = sizeof (A) / sizeof (A[0]);
+  int Bsize = sizeof (B) / sizeof (B[0]);
+  int totalsize = Asize + Bsize;
+  int k,q,w = 0;
+  int union[totalsize];
+  while( k < totalsize)
+  {   
+      if(q != Asize|| w!= Bsize)
+      {
+          if (A[q] <= B[w]) { union[k] = A[q];k++;q++}
+          else (A[q]>B[w]){union[k] = B[w];k++;w++}
+          
+      }
+      else if(q == Asize )
+      {
+          union[k] = B[w];k++;w++;
+      }
+      else {
+          union[k] = A[q];k++;q++;
+      }
+      
+  }
+  return union;
+  
+  
+  /// program for intersection sorted array
+  vector<int> intersection (int A[], int B[])
+{
+  int Asize = sizeof (A) / sizeof (A[0]);
+  int Bsize = sizeof (B) / sizeof (B[0]);
+  vector <int> inter;
+  int q,w,k,i;
+  while(q!=Asize && w!=Bsize)
+  {
+      if(q!=Asize)
+      {
+        (if(A[q]<B[w])
+         {
+          inter.push_back(A[q]);
+          int i = q;
+          while(A[i] != A[q])
+              {
+                 i++;
+              }
+            q = i;
+         }
+      }
+      if(q!=Asize)
+      {
+      if(A[q]>=B[w])
+      {
+          inter.push_back(B[w]);
+          int i = q;
+          while(B[i] != B[w])
+          {
+              i++;
+              
+          }
+          w = i;
+      }
+      }
+      return inter;
+  }
