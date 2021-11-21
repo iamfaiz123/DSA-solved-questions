@@ -1,0 +1,27 @@
+//code by iamfaizalkhn@gmail.com
+//the idea is simple, we find the maxhight of left sub tree and right sub tree and add them
+#include<bits/stdc++.h>
+using namespace std;
+class Tree{
+    public:
+    int data;
+    Tree* right;
+    Tree* left;
+    
+};
+int maxhieght(Tree* root)
+{
+    if(root==NULL) return -1;
+    else return max(maxhieght(root->left),maxhieght(root->right))+1;
+    
+}
+int maxdimeter(Tree* root)
+{
+    return (maxhieght(root->left)+maxhieght(root->right));
+    
+}
+int main(){
+    cout<<"anything";
+    //write your code here
+    return 0;
+}
