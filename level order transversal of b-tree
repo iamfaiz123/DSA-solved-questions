@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+class node{
+    public:
+    int data;
+    node* left;
+    node* right;
+    
+};
+void levelordertrans(node* root)
+{  
+   node* current = root;
+   queue<node*> address ;
+   queue.push(current)
+   while(!address.empty())
+   {
+       current = address.front();
+       cout<<current->data;
+       if(current->left!=NULL) adress.push(current->left);
+       if(current->right!=NULL)adress.push(current->right);
+       adress.pop();
+   }
+}
+int main()
+{
+   //write your own program 
+}
