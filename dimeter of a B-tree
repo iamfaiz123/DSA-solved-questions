@@ -1,5 +1,6 @@
 //code by iamfaizalkhn@gmail.com
 //the idea is simple, we find the maxhight of left sub tree and right sub tree and add them
+//note# this code only works if the max dimeter is through root
 #include<bits/stdc++.h>
 using namespace std;
 class Tree{
@@ -17,7 +18,7 @@ int maxhieght(Tree* root)
 }
 int maxdimeter(Tree* root)
 {
-    return (maxhieght(root->left)+maxhieght(root->right));
+    return (maxhieght(root->left)+maxhieght(root->right))+2;
     
 }
 int main(){
