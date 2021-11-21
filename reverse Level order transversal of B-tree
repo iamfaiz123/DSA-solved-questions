@@ -1,0 +1,42 @@
+//code by faizal khan
+//iamfaizalkhn@gmail.com
+
+
+#include<bits/stdc.h++>
+using namespace std;
+class Tree
+{
+    public:
+    int data;
+    Tree* left;
+    Tree* right;
+    
+};
+void reverseLevelTrans(Tree* root)
+{
+    stack<Tree*> S;
+    queue<Tree*> Q ;
+    queue.push(root);
+    Tree* current = NULL;
+    while(!Q.empty())
+    {
+        current = Q.front();
+        Q.pop();
+        if(current->right!=NULL) Q.push(current->right);
+        if(current->left!=NULL) Q.push(current->left);
+        S.push(current);
+       
+    }
+    current = NULL;
+    while(!S.empty())
+    {
+        current = S.top();
+        cout<<current->data<<" ";
+        S.pop();
+    }
+}
+int main()
+{
+    //write your prpgram your self
+    return 0;
+}
