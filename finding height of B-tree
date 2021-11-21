@@ -1,0 +1,20 @@
+//code by iamfaizalkhn@gmail.com
+include<bits/stdc++.h>
+using namespace std;
+class Tree{
+    public:
+    int data;
+    Tree* left;
+    Tree* right;
+};
+int FindH(Tree* root)
+{
+    if(root == NULL) return -1;
+    else 
+    return max(FindH(root->left),FindH(root->right))+1;
+}
+int main()
+{
+    //write your code
+    return 0;
+}
