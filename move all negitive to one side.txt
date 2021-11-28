@@ -1,4 +1,4 @@
-//code by iamfaizalkhn@gmail.com
+//code by iamfaizalkhn@gmail.com//this is optimized version
 #include<bits.stdc++.h>
 using namespace std;
 void function(int* arr,int n)
