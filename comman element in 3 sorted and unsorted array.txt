@@ -1,0 +1,25 @@
+//code by iamfaizal@gmail.com
+// this code will work for order as well as unordered arrays, time complexity is (n1+n2+n3) due to insertation , searching is constant since it is implement using black forest forest
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n1 = 5;
+    int n2 = 4;
+    int n3 = 6;
+    int m1[n2] = {1,47,86,46,71};
+    int m2[n2] = {23,75,47,48};
+    int m3[n3] = {4,79,46,44,47,65};
+    unordered_set<int> set1,set2,set3;
+    //for(auto i =0; i < n1 ; i++) set.insert(m1[i]);
+    for(auto i =0; i < n2 ; i++) set2.insert(m2[i]);
+    for(auto i =0; i < n3 ; i++) set3.insert(m3[i]);
+    for(auto i = 0 ; i < n1 ;i++)
+    {
+       if ( ( set2.find(m1[i]) != set2.end() ) && ( set3.find(m1[i])  != set3.end() ) )
+       {
+           cout<<m1[i] << endl ;
+       }
+    }
+    return 0;
+}
