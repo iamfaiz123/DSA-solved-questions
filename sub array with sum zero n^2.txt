@@ -1,0 +1,19 @@
+//code by iamfaizalkhn@gmail.com
+//time complexity is n^2;
+//check another code in the repo for less time complexity
+
+int SAWSO(int* arr)
+{
+    int size = sizeof(arr)/sizeof(arr[i]);
+    int sum = 0;
+    for(auto i =0 ; i < size ; i++)
+    {   sum = 0;
+        for(auto k = i; k < size ; k++)
+        {
+            sum = sum + arr[k];
+            if(sum == 0){count++;break;}
+        }
+    }
+    if(count == 0)return 0;
+    else return 1;
+}

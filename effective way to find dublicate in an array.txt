@@ -1,0 +1,23 @@
+//effective way to find dublicate in an array
+// time complexity is n+m , m came form increment of i in the loop; 
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arr[] = {1,4,6,8,7,6,4,2,4,6,4,9,66,7};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    sort(arr,arr+size);
+    int count  = 0;
+    int flag = 0;
+    for(auto i =0 ; i  <size ; )
+    {   count = 0;
+        if(arr[i] == arr[i+1])
+        {
+            cout<<arr[i];
+            flag = arr[i];
+            while(arr[i] == flag){i++;count++;}
+        }
+        if(count == 0)i++;
+        
+    }
+}
